@@ -44,7 +44,7 @@ class _CounterState extends State<Counter> {
                   children: <Widget>[
                     IconButton(
                       icon: Icon(
-                        Icons.minimize,
+                        Icons.indeterminate_check_box,
                         color: Colors.black,
                       ),
                       onPressed: () {
@@ -59,7 +59,7 @@ class _CounterState extends State<Counter> {
                     ),
                     IconButton(
                       icon: Icon(
-                        Icons.control_point,
+                        Icons.add,
                         color: Colors.black,
                       ),
                       onPressed: () {
