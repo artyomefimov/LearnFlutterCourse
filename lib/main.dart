@@ -1,4 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_trainee_education/part3/dynamic_list_view.dart';
+import 'package:flutter_trainee_education/part3/home_weather_forecast_detail.dart';
 
-void main() => runApp(DynamicListView());
+void main() => runApp(WeatherForecastDetail());
