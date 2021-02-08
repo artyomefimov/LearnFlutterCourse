@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_trainee_education/part11/network/bloc/user_bloc.dart';
 import 'package:flutter_trainee_education/part11/network/bloc/user_state.dart';
+import 'package:flutter_trainee_education/part11/network/cubit/user_cubit.dart';
 
 class UserList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<UserBloc, UserState>(
+    return BlocBuilder<UserCubit, UserState>(
       builder: (context, state) {
         if (state is UserEmptyState) {
           return Center(

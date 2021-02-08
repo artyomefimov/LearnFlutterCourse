@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_trainee_education/part11/network/bloc/user_bloc.dart';
-import 'package:flutter_trainee_education/part11/network/bloc/user_event.dart';
+import 'package:flutter_trainee_education/part11/network/cubit/user_cubit.dart';
 
 class ActionButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: close_sinks
-    final UserBloc userBloc = BlocProvider.of<UserBloc>(context);
+    final UserCubit userCubit = BlocProvider.of<UserCubit>(context);
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         RaisedButton(
           child: Text('Load'),
           onPressed: () {
-            userBloc.add(UserLoadEvent());
+            userCubit.fetchUsers();
           },
           color: Colors.green,
         ),
@@ -22,7 +21,7 @@ class ActionButtons extends StatelessWidget {
         RaisedButton(
           child: Text('Clear'),
           onPressed: () {
-            userBloc.add(UserClearEvent());
+            userCubit.clearUsers();
           },
           color: Colors.red,
         ),

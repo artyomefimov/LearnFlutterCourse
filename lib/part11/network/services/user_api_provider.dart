@@ -6,7 +6,7 @@ class UserProvider {
   // http://jsonplaceholder.typicode.com/users
 
   Future<List<User>> getUser() async {
-    final response = await http.get('http://jsovnplaceholder.typicode.com/users');
+    final response = await http.get('http://jsonplaceholder.typicode.com/users');
 
     if (response.statusCode == 200) {
       final List<dynamic> userJson = json.decode(response.body);
