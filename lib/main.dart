@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_trainee_education/part5/form.dart';
+import 'package:flutter_trainee_education/part10/screens/location_screen.dart';
 
-void main() => runApp(FormExample());
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: LocationScreen(),
+    );
+  }
+}
