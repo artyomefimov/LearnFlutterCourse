@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: close_sinks
-    ColorBloc _bloc = context.bloc<ColorBloc>();
+    ColorBloc _bloc = context.watch<ColorBloc>();
     return Scaffold(
       appBar: AppBar(
         title: Text('BLoC with flutter_bloc'),
@@ -66,8 +66,7 @@ enum ColorEvent {event_red, event_green}
 class ColorBloc extends Bloc<ColorEvent, Color> {
   Color _color = Colors.red;
 
-  @override
-  Color get initialState => Colors.red;
+  ColorBloc() : super(Colors.red);
 
   @override
   Stream<Color> mapEventToState(ColorEvent event) async* {
